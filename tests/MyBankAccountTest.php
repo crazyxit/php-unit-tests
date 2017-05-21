@@ -11,7 +11,7 @@ require __DIR__ . "/../src/MyBankAccount.php";
 
 class MyBankAccountTest extends TestCase
 {
-    public function testCanBeCreated(){
+    public function testCanBeCreatedByLegalAboveMin(){
         $BA = new MyBankAccount(25, 120);
 
         $this->assertEquals(
@@ -20,7 +20,7 @@ class MyBankAccountTest extends TestCase
         );
     }
 
-    public function testCannotBeCreated(){
+    public function testCannotBeCreatedByNotLegal(){
         $this->expectException(InvalidArgumentException::class);
         $BA = new MyBankAccount(15, 120);
     }
