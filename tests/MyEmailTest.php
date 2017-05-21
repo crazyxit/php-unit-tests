@@ -8,7 +8,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-
+require __DIR__ . "/../classes/MyEmail.php";
 
 /**
  * @covers MyEmail
