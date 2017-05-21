@@ -23,7 +23,7 @@ final class MyEmail
         return new self($email);
     }
 
-    public function __toString(): string
+    public function __toString()
     {
         return $this->email;
     }
@@ -38,7 +38,5 @@ final class MyEmail
                 )
             );
         }
-
-        return true;
     }
 }
