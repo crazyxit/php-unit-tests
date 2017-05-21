@@ -42,6 +42,22 @@ class MyBankAccount{
             else if ($this->sum >= $this->minSum){
                 $this->interest = 0.01; //1.0%
             }
+            else{
+                throw new InvalidArgumentException(
+                    sprintf(
+                        '"%s" is not a valid sum',
+                        $this->sum
+                    )
+                );
+            }
+        }
+        else{
+            throw new InvalidArgumentException(
+                sprintf(
+                    '"%s" is not a valid age',
+                    $this->age
+                )
+            );
         }
     }
 
