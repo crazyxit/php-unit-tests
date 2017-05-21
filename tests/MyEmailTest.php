@@ -15,7 +15,7 @@ require __DIR__ . "/../classes/MyEmail.php";
  */
 class MyEmailTest extends TestCase
 {
-    public function testCanBeCreatedFromValidEmailAddress(): void
+    public function testCanBeCreatedFromValidEmailAddress()
     {
         $this->assertInstanceOf(
             MyEmail::class,
@@ -23,14 +23,14 @@ class MyEmailTest extends TestCase
         );
     }
 
-    public function testCannotBeCreatedFromInvalidEmailAddress(): void
+    public function testCannotBeCreatedFromInvalidEmailAddress()
     {
         $this->expectException(InvalidArgumentException::class);
 
         MyEmail::fromString('invalid');
     }
 
-    public function testCanBeUsedAsString(): void
+    public function testCanBeUsedAsString()
     {
         $this->assertEquals(
             'user@example.com',
